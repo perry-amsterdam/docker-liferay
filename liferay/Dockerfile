@@ -1,4 +1,4 @@
-# Based on oracle-jdk 1.7 from airdock
+# Based on oracle-jdk 1.8 from airdock
 FROM airdock/oracle-jdk:1.8
 
 RUN apt-get update
