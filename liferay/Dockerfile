@@ -9,14 +9,14 @@ RUN apt-get autoremove -y
 RUN apt-get update && apt-get install -y unzip && apt-get install -y wget
 
 # Download and install liferay
-RUN wget https://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.2.5%20GA6/liferay-portal-tomcat-6.2-ce-ga6-20160112152609836.zip
+RUN wget https://sourceforge.net/projects/lportal/files/Liferay%20Portal/7.1.0%20GA1/liferay-ce-portal-tomcat-7.1.0-ga1-20180703012531655.zip
 
-RUN unzip liferay-portal-tomcat-6.2-ce-ga6-20160112152609836.zip -d /opt
-RUN rm liferay-portal-tomcat-6.2-ce-ga6-20160112152609836.zip
+RUN unzip liferay-ce-portal-tomcat-7.1.0-ga1-20180703012531655.zip -d /opt
+RUN rm liferay-ce-portal-tomcat-7.1.0-ga1-20180703012531655.zip
 
 RUN mkdir -p /opt
-RUN ln -s  /opt/liferay-portal-6.2-ce-ga6 /opt/liferay-portal
-RUN ln -s /opt/liferay-portal/tomcat-7.0.62 /opt/liferay-portal/tomcat
+RUN ln -s  /opt/liferay-ce-portal-7.1.0-ga1 /opt/liferay-portal
+RUN ln -s /opt/liferay-portal/tomcat-9.0.6 /opt/liferay-portal/tomcat
 RUN ls /opt/liferay-portal/tomcat/bin/catalina.sh -all
 
 # Add configuration files
